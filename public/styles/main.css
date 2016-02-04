@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.motherContainer {
+  background: #d1d1d1;
+
+  padding: 0px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topMenu {
+  background: #3b3c3d;
+  color: white;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /*box-shadow: 0px 2px 3px 3px #505050;*/
+
+
+}
+
+a:link {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+a:visited {
+  color:white;
+}
+
+.titleLogoThing {
+  flex-grow: 5;
+  padding: 0px 30px;
+  font-family: 'Racing Sans One', cursive;
+}
+
+.navMenu {
+  display: flex;
+  padding: 0px 30px;
+  list-style-type: none;
+  justify-content: space-between;
+  flex-grow: 1;
+  font-family: 'Racing Sans One', cursive;
+}
+
+.navMenu.li {
+  display: inline-flex;
+}
+
+.contentBox {
+  width: 100%;
+  height: 100vh;
+}
