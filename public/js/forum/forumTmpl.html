@@ -1,16 +1,14 @@
 <div class="contentBox">
-    <div class="threadsContainer">
-        <h1 class="threadTitle">Threads</h1>
+    <h1 class="threadTitle">Threads</h1>
+    <div class="threadsContainer">      
         <div class="forumNav">
             <create-thread></create-thread>
-            <hr>
             <div class="forumNavButtons">
                 <button ng-click="advancedSearch=!advancedSearch">Search</button>
                 <form ng-hide="advancedSearch">
                     <input class="form-control" placeholder="Search Threads" ng-model="search">         
                 </form>
             </div>
-            <hr>
         </div>
         <div class="threadCard" ng-repeat="thread in threads | filter: search">
             <div class="threadHeader">

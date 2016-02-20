@@ -2,23 +2,36 @@
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
 }
 
 .threadsContainer {
     background: #ffffff;
-    float: left;  
-    flex-direction: column-reverse;
+    display: flex; 
+    flex-direction: column;
     flex-grow: 2;
     border-radius: 5px;
+    align-items: center;
+   
+}
+
+.forumNav {
+    text-align: left;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    width: 100%;
 }
 
 .threadTitle {
     text-align: center;
+    background: white;
+   
 }
 .threadCard {
      background: #d1d1d1;
     margin-bottom: 10px;
     padding: 10px;
+    width: 70%;
     
 }
 
