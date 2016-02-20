@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html ng-app="gcApp">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/main.css" media="screen" title="no title" charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
-    <title>Gearhead Collective | Forums</title>
-  </head>
-  <body>
 
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/main.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/navbar.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/footer.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/home.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/forum.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/profile.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/about.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/thread.css" media="screen" title="no title" charset="utf-8">
+
+    <title>Gearhead Collective</title>
+</head>
+
+<body>
     <div class="motherContainer">
 
-      <div class="topMenu">
-        <div class="titleLogoThing">
-          <h1>Gearhead Collective</h1>
-        </div>
-        <div class="navMenu">
-          <a ui-sref="home">Home</a>
-          <a ui-sref="forum">Forums</a>
-          <a ui-sref="profile">My Profile</a>
-        </div>
-      </div>
+       <navbar></navbar>
 
-      <div ui-view class="contentBox">
+        <div ui-view class="contentBox"></div>
 
-      </div>
-
+        <footer></footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     <script src="js/app.js"></script>
     <script src="js/forum/forumController.js"></script>
     <script src="js/forum/forumService.js"></script>
+    <script src="js/thread/threadController.js"></script>
+    <script src="js/thread/threadService.js"></script>
     <script src="js/home/homeController.js"></script>
     <script src="js/home/homeService.js"></script>
     <script src="js/profile/profileController.js"></script>
     <script src="js/profile/profileService.js"></script>
-  </body>
+    <script src="js/directives/signUpDirective.js"></script>
+    <script src="js/directives/navbarDirective.js"></script>
+    <script src="js/directives/createThreadDirective.js"></script>
+    <script src="js/directives/sideMenuDirective.js"></script>
+    <script src="js/directives/footerDirective.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,17 @@
+<div class="profileContainer">
+    <div class="profileInfo">
+        <h1>Profile Info</h1>
+       <h2>Name: {{profile.first_name}} {{profile.last_name}}</h2>
+       <h3>Location: {{profile.city}} {{profile.state}} {{profile.country}} </h3>
+       <h3>Email: {{profile.email}} </h3>
+    </div>
+    <h1>Your Threads</h1>
+    <div class="userActivity" ng-repeat="thread in profile.threads">
+                <a ng-href="#/forum/thread/{{thread._id}}"><h2>{{ thread.title }}</h2></a>
+                <h4>{{ thread.author }}</h4>
+                <h4>{{ thread.job_category }}</h4>
+                <h4>{{ thread.system_category }}</h4> {{ thread.vehicle_year }} {{ thread.vehicle_make }}, {{ thread.vehicle_model }}
+                <p>{{thread.thread_text}}</p>
+                
+    </div>
+</div>

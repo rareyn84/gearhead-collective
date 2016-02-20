@@ -1,0 +1,15 @@
+.imageContainer {
+    background: url(https://images.unsplash.com/photo-1443752564648-c07e0c6cefce?crop=entropy&fit=crop&fm=jpg&h=750&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450);
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutText {
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+    width: 100vh;
+}

@@ -1,0 +1,26 @@
+<div class="threadContainer">
+
+    <div class="threadHeader">
+        <h2>{{ thread.title }}</h2>
+        <h4>{{ thread.created_by.first_name }} {{ thread.created_by.last_name }} </h4>
+        </h4> {{ thread.vehicle_year }} {{ thread.vehicle_make }}, {{ thread.vehicle_model }}
+    </div>
+    <hr>
+    <div class="originalPost">
+        {{ thread.thread_text }}
+    </div>
+    <h3>Comments</h3>
+    <div class="commentsContainer" ng-repeat="comment in thread.comments">
+        <div commentCard>
+            {{comment.user.first_name}}
+            {{comment.comment_text}}
+        </div>
+        
+    </div>
+    <div class="replyToThread">
+        <textarea ng-model="newComment.comment_text"></textarea>
+        <br>
+        <button ng-click="addComment(newComment)">Add Comment</button>
+    </div>
+</div>
+

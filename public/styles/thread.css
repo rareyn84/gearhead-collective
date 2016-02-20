@@ -1,0 +1,33 @@
+.threadContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.threadHeader {
+    height: auto;
+    text-align: center;
+}
+
+.originalPost {
+    font-size: 24px;
+}
+.commentsContainer {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.commentCard {
+    background: white;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.replyToThread {
+    text-align: center;
+}
