@@ -5,6 +5,16 @@ angular.module('gcApp').service('threadService', function($http, $q) {
             method: 'GET',
             url: 'api/forum/thread/' + id,
         }).then(function(res) {
+            console.log(res.data);
+            return res.data;   
+        })
+    }
+    
+    this.getComments = function (id) {
+        return $http({
+            method: 'GET',
+            url: 'api/comment?created_by=' + id
+        }).then(function (res) {
             return res.data;
         })
     }
@@ -17,7 +27,7 @@ angular.module('gcApp').service('threadService', function($http, $q) {
             url: '/api/comment/new',
             data: newComment
         }).then(function (res) {
-            return res.data
+            return res.data;
             
         })
     }

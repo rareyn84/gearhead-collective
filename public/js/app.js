@@ -9,7 +9,7 @@ angular.module('gcApp', ['ui.router'])
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: '/js/home/homeTmpl.html', 
+            templateUrl: '/js/home/homeTmpl.html',
             controller: 'homeController'
         })
         .state('forum', {

@@ -12,7 +12,7 @@
     <h3>Comments</h3>
     <div class="commentsContainer" ng-repeat="comment in thread.comments">
         <div commentCard>
-            {{comment.user.first_name}}
+            {{comment.created_by}}
             {{comment.comment_text}}
         </div>
         

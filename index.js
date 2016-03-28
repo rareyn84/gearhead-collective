@@ -39,12 +39,12 @@ app.post('/api/forum/new', ThreadCtrl.createThread)
             //PROFILE
 app.get('/api/user/:id', UserCtrl.getProfile)
 app.put('/api/user/update/:id', UserCtrl.updateUser)
-
 // app.delete('/api/user', userCtrl.delete)
 
 
             //COMMENTS
 app.post('/api/comment/new', CommentCtrl.createComment)
+app.get('/api/comment', CommentCtrl.getComments)
 
 
 
