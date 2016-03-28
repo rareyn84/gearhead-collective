@@ -5,6 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "4.2.4"  
+  },
   "author": "Richard Reynolds",
   "license": "ISC",
   "dependencies": {
