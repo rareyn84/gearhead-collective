@@ -14,7 +14,7 @@ var CommentCtrl = require('./api/controllers/CommentCtrl')
 var app = express();
 app.use(bodyParser.json());
 
-var mongoUri = "mongodb://rareynolds84:Chulched1!@ds025429.mlab.com:25429/gearhead-collective";
+var mongoUri = "mongodb://Admin:admin@ds025429.mlab.com:25429/gearhead-collective";
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {
     console.log("Mongoing like a boss")
