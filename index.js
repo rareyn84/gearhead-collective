@@ -49,7 +49,7 @@ app.get('/api/comment', CommentCtrl.getComments)
 
 
 
-var port = 8008;
+var port = process.env.PORT || 8008;
 app.listen(port, function() {
     console.log('Hulk smashing on port ' + port)
 })
