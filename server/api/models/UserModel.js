@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var bcrypt = require('bcryptjs');
 
-
-var User = new Schema({
+var userSchema = mongoose.Schema({
     email: {
         type: String,
         required: true,
@@ -34,9 +33,22 @@ var User = new Schema({
         required: false
     },
     threads: [{
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Thread'
     }]
 });
 
-module.exports = mongoose.model('User', User);
+userSchema.pre('save', function(next) {
+  var user = this;
+  if (!user.isModified('password')) return next();
+  var salt = bcrypt.genSaltSync(10);
+  var hash = bcrypt.hashSync(user.password, salt);
+  user.password = hash;
+  return next(null, user);
+});
+
+userSchema.methods.verifyPassword = function(reqBodyPassword) {
+  var user = this;
+  return bcrypt.compareSync(reqBodyPassword, user.password);
+};
+module.exports = mongoose.model('User', userSchema);

@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var Thread = new Schema({
     created_by: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
     title: {
@@ -27,7 +27,7 @@ var Thread = new Schema({
         required: true,
     },
     comments: [{
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Comment'
     }]
 })

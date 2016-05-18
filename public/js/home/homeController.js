@@ -1,9 +1,6 @@
-angular.module('gcApp').controller('homeController', function($scope, $rootScope, homeService, $state) {
+angular.module('gcApp').controller('homeController', function($scope, $rootScope, authService, $state) {
        $scope.logUserIn = function(user) {
-           return homeService.logUserIn(user).then(function(res){
-               $rootScope.user = res;
-               localStorage.setItem('userData', JSON.stringify(res));
-               $rootScope.loggedIn = true;
+           return authService.login(user).then(function(res){
                $state.go('forum');
            })
        } 
