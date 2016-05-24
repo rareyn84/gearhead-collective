@@ -1,0 +1,53 @@
+.overlay {
+    color: black;
+    padding: 25px;
+    border: 10px solid black;
+    background-color: white;
+    z-index: 100;
+    overflow: auto;
+    border-radius: 2px;
+    -webkit-box-shadow: 15px 13px 0px 0px rgba(0,0,0,0.64);
+    -moz-box-shadow: 15px 13px 0px 0px rgba(0,0,0,0.64);
+    box-shadow: 15px 13px 0px 0px rgba(0,0,0,0.64);
+}
+  
+
+  h2 {
+      text-align: center;
+  }
+    
+
+.closeButton {
+    position: relative;
+    bottom: 15px;
+    right: 17px;
+  
+}
+  
+
+  h4 {
+      text-align: center;
+      text-transform: uppercase;
+  }
+    
+
+  .help-text {
+      color: red;
+      font-size: 10px;
+  }
+    
+
+.fade {
+    position: fixed;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(5, 5, 5, .7);
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  

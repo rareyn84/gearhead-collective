@@ -1,0 +1,13 @@
+<div class="confirm">   
+  <div class="fade" ng-click="close()">
+      <div class="overlay">
+        <div class="exit" ng-click='close(false)'>
+        <i class="fa fa-times"></i>
+        </div>
+        {{text}}
+        <br />
+        <button type="button" ng-click="close(true)">Yes</button>
+        <button type="button" ng-click="close(false)">No</button>
+    </div>
+  </div>
+</div>

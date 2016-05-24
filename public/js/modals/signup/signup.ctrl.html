@@ -1,0 +1,68 @@
+<div class="fade">
+    <div class="overlay">
+        <button class="closeButton" ng-click="close()">X</button>
+        <h4>Create New user</h4>
+        <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>    
+            <label>First Name</label><br>
+            <input 
+                autofocus="true"
+                name="firstName" 
+                class="form-control" 
+                ng-model="user.firstName" 
+                ng-minlength="2" 
+                type="text" 
+                placeholder="Name" 
+                required> 
+            
+            <br> 
+            
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">First name is required</p> 
+            
+            <label>Last Name</label><br>
+            <input 
+                name="lastName" 
+                class="form-control" 
+                ng-model="user.lastName" 
+                ng-minlength="2" 
+                type="text" 
+                placeholder="Name" 
+                required> 
+            <br> 
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Last name is required</p> 
+                
+            <label>Email</label><br>
+            <input 
+                name="email" 
+                class="form-control" 
+                ng-model="user.email" 
+                required type="email" 
+                placeholder="Email"> 
+            <br>
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-text">Enter a valid email address</p>  
+            <label>Password</label><br>
+            <input 
+                name="password" 
+                class="form-control" 
+                ng-model="user.password" 
+                required 
+                ng-minlength="6" 
+                ng-maxlength="18" 
+                type="password" 
+                placeholder="Password">   
+            <br>
+            <p ng-show="userForm.password.$error.minlength" class="help-text">Password must be as least six characters</p>
+            <p ng-show="userForm.password.$error.maxlength" class="help-text">Password must be less than eighteen characters</p>
+            <label>Confirm Password</label><br>
+            <input  
+                name="confirmPassword"  
+                type="password"
+                ng-model="password2" 
+                required 
+                placeholder="Password Again..."> 
+            <br>
+            <p ng-if="user.password !== password2 &&!userForm.confirmPassword.$pristine" class="help-text">Passwords don't match! Keep at it!</p>
+            <p ng-show="user.password === password2 &&!userForm.confirmPassword.$pristine" class="help-text">Got it!</p>
+            <button type="submit" ng-click="signUp(user)" ng-disabled="heroForm.$invalid">Start New Campaign!</button>
+        </form>
+    </div>
+</div>
