@@ -1,4 +1,4 @@
-angular.module('gcApp', ['ui.router'])
+angular.module('gcApp', ['ui.router', 'angularModalService'])
 
 
 

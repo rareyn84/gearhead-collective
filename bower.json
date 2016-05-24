@@ -1,0 +1,25 @@
+{
+  "name": "gearhead-collective",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Richard Reynolds"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/rareyn84/gearhead-collective",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-modal-service": "^0.9.10",
+    "angular-ui-router": "ui-router#^0.3.0"
+  }
+}
